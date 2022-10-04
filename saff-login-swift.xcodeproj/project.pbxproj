@@ -7,18 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A24EB60028EB235B0022B154 /* saff_login_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB5FF28EB235B0022B154 /* saff_login_swiftApp.swift */; };
-		A24EB60228EB235B0022B154 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB60128EB235B0022B154 /* ContentView.swift */; };
+		A24EB60028EB235B0022B154 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB5FF28EB235B0022B154 /* Application.swift */; };
+		A24EB60228EB235B0022B154 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB60128EB235B0022B154 /* Main.swift */; };
 		A24EB60428EB235C0022B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24EB60328EB235C0022B154 /* Assets.xcassets */; };
 		A24EB60728EB235C0022B154 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24EB60628EB235C0022B154 /* Preview Assets.xcassets */; };
+		A24EB60E28EB23A90022B154 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB60D28EB23A90022B154 /* LoginView.swift */; };
+		A24EB61028EB23AD0022B154 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB60F28EB23AD0022B154 /* HomeView.swift */; };
+		A24EB61228EB289D0022B154 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB61128EB289D0022B154 /* Extensions.swift */; };
+		A24EB61428EB4BC80022B154 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB61328EB4BC80022B154 /* ViewModel.swift */; };
+		A24EB61928EB693F0022B154 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = A24EB61828EB693F0022B154 /* SwiftKeychainWrapper */; };
+		A24EB61B28EB69520022B154 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB61A28EB69520022B154 /* Credentials.swift */; };
+		A24EB61D28EB69F60022B154 /* BiometricsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EB61C28EB69F60022B154 /* BiometricsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A24EB5FC28EB235B0022B154 /* saff-login-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "saff-login-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A24EB5FF28EB235B0022B154 /* saff_login_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saff_login_swiftApp.swift; sourceTree = "<group>"; };
-		A24EB60128EB235B0022B154 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A24EB5FF28EB235B0022B154 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		A24EB60128EB235B0022B154 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		A24EB60328EB235C0022B154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A24EB60628EB235C0022B154 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A24EB60D28EB23A90022B154 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A24EB60F28EB23AD0022B154 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A24EB61128EB289D0022B154 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A24EB61328EB4BC80022B154 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A24EB61A28EB69520022B154 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		A24EB61C28EB69F60022B154 /* BiometricsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A24EB61928EB693F0022B154 /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +65,16 @@
 		A24EB5FE28EB235B0022B154 /* saff-login-swift */ = {
 			isa = PBXGroup;
 			children = (
-				A24EB5FF28EB235B0022B154 /* saff_login_swiftApp.swift */,
-				A24EB60128EB235B0022B154 /* ContentView.swift */,
+				A24EB5FF28EB235B0022B154 /* Application.swift */,
+				A24EB60128EB235B0022B154 /* Main.swift */,
 				A24EB60328EB235C0022B154 /* Assets.xcassets */,
 				A24EB60528EB235C0022B154 /* Preview Content */,
+				A24EB60D28EB23A90022B154 /* LoginView.swift */,
+				A24EB60F28EB23AD0022B154 /* HomeView.swift */,
+				A24EB61128EB289D0022B154 /* Extensions.swift */,
+				A24EB61328EB4BC80022B154 /* ViewModel.swift */,
+				A24EB61A28EB69520022B154 /* Credentials.swift */,
+				A24EB61C28EB69F60022B154 /* BiometricsManager.swift */,
 			);
 			path = "saff-login-swift";
 			sourceTree = "<group>";
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = "saff-login-swift";
+			packageProductDependencies = (
+				A24EB61828EB693F0022B154 /* SwiftKeychainWrapper */,
+			);
 			productName = "saff-login-swift";
 			productReference = A24EB5FC28EB235B0022B154 /* saff-login-swift.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,9 @@
 				Base,
 			);
 			mainGroup = A24EB5F328EB235B0022B154;
+			packageReferences = (
+				A24EB61728EB693F0022B154 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+			);
 			productRefGroup = A24EB5FD28EB235B0022B154 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A24EB60228EB235B0022B154 /* ContentView.swift in Sources */,
-				A24EB60028EB235B0022B154 /* saff_login_swiftApp.swift in Sources */,
+				A24EB61228EB289D0022B154 /* Extensions.swift in Sources */,
+				A24EB60E28EB23A90022B154 /* LoginView.swift in Sources */,
+				A24EB61D28EB69F60022B154 /* BiometricsManager.swift in Sources */,
+				A24EB61B28EB69520022B154 /* Credentials.swift in Sources */,
+				A24EB61028EB23AD0022B154 /* HomeView.swift in Sources */,
+				A24EB60228EB235B0022B154 /* Main.swift in Sources */,
+				A24EB61428EB4BC80022B154 /* ViewModel.swift in Sources */,
+				A24EB60028EB235B0022B154 /* Application.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +302,10 @@
 				DEVELOPMENT_TEAM = M9AP67F2SC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow to use Face ID for login";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "You need location for punch in / out";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "You need location for punch in / out";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +335,10 @@
 				DEVELOPMENT_TEAM = M9AP67F2SC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow to use Face ID for login";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "You need location for punch in / out";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "You need location for punch in / out";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A24EB61728EB693F0022B154 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A24EB61828EB693F0022B154 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A24EB61728EB693F0022B154 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A24EB5F428EB235B0022B154 /* Project object */;
 }
