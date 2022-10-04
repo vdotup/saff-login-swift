@@ -27,6 +27,9 @@ class ViewModel: NSObject, ObservableObject {
     @Published public var username: String = ""
     @Published public var password: String = ""
     
+    @Published public var punchInTime: Date?
+    @Published public var punchOutTime: Date?
+    
     @AppStorage("biometricsEnabled") public var biometricsEnabled: Bool = false
     
     public func login() {
@@ -39,8 +42,6 @@ class ViewModel: NSObject, ObservableObject {
         } else {
             DispatchQueue.main.async {
                 self.loggedIn = true
-                self.username = ""
-                self.password = ""
                 self.startLocationUpdate()
             }
         }
@@ -64,7 +65,11 @@ class ViewModel: NSObject, ObservableObject {
     }
     
     public func logout() {
-        loggedIn = false
+        DispatchQueue.main.async {
+            self.loggedIn = false
+            self.username = ""
+            self.password = ""
+        }
     }
     
     public func enableBiometrics() {
@@ -72,7 +77,10 @@ class ViewModel: NSObject, ObservableObject {
             if success {
                 let credentials = Credentials(username: self.username, password: self.password)
                 KeyChainStorage.saveCredentials(credentials: credentials)
-                self.biometricsEnabled = true
+                DispatchQueue.main.async {
+                    self.biometricsEnabled = true
+                }
+                
             }
         }
     }
@@ -83,6 +91,7 @@ class ViewModel: NSObject, ObservableObject {
         }
         if distance <= 10 {
             print("punched in")
+            punchInTime = Date()
         } else {
             print("too big")
             showingNotInLocationAlert.toggle()
@@ -95,7 +104,8 @@ class ViewModel: NSObject, ObservableObject {
         }
         print(distance)
         if distance <= 10 {
-            print("punched put")
+            print("punched out")
+            punchOutTime = Date()
         } else {
             print("too big")
             showingNotInLocationAlert.toggle()

@@ -49,10 +49,18 @@ struct HomeView: View {
             .disabled(viewModel.biometricsEnabled)
             Spacer()
             
-            Text("SAFF Location: \(viewModel.saffLocation.string())")
-            Text("User Location: \(viewModel.userLocation?.string() ?? "nil")")
-            Text("Distance: \(viewModel.calcDistance() ?? -1)")
+            VStack {
+                Text("SAFF Location: \(viewModel.saffLocation.string())")
+                Text("User Location: \(viewModel.userLocation?.string() ?? "nil")")
+                Text("Distance: \(viewModel.calcDistance() ?? -1)")
+            }
+            
             Spacer()
+            
+            VStack {
+                Text("Punch In: \(viewModel.punchInTime?.formatted(date: .numeric, time: .complete) ?? "not yet")")
+                Text("Punch Out: \(viewModel.punchOutTime?.formatted(date: .numeric, time: .complete) ?? "not yet")")
+            }
             
             Button(action: viewModel.punchIn) {
                 Text("Punch In")
