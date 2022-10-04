@@ -10,6 +10,6 @@ SAFF login and punch in / out.
 # UI UX prototype
 https://www.figma.com/file/qFt2IOrQ4bn9qHrNVifnXE/SAFF-Login-Punch-In%2FOut?node-id=0%3A1
 
-iOS Preview
+# iOS Preview
 https://user-images.githubusercontent.com/29972487/193839112-d3d1988f-e72c-4cd3-9d44-e3914146ea92.mov
 
